@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models/User"); // Sesuaikan path-nya
+const Penumpang = require("../models/penumpang"); // Sesuaikan path-nya
 
 module.exports = async function (req, res, next) {
   const authHeader = req.header("Authorization");
@@ -13,17 +13,17 @@ module.exports = async function (req, res, next) {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    // Cek user di database MySQL
-    const user = await User.findByPk(decoded.user.id); // Sesuai field `id` di token
+    // Cek penumpang di database MySQL
+    const penumpang = await Penumpang.findByPk(decoded.user.id); // Sesuai field `id` di token
 
-    if (!user) {
-      return res.status(401).json({ msg: "User not found" });
+    if (!penumpang) {
+      return res.status(401).json({ msg: "Penumpang tidak ditemukan" });
     }
 
-    req.user = user; // bisa pakai user.id, user.role, dll
+    req.user = penumpang; // bisa pakai user.id, user.role, dll
     next();
   } catch (err) {
     console.error(err);
-    res.status(401).json({ msg: "Token is not valid" });
+    res.status(401).json({ msg: "Token tidak valid" });
   }
 };

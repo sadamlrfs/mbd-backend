@@ -1,0 +1,9 @@
+DELIMITER //
+CREATE FUNCTION total_pesanan() RETURNS INT
+DETERMINISTIC
+BEGIN
+  DECLARE jumlah INT;
+  SELECT COUNT(*) INTO jumlah FROM pesanan;
+  RETURN jumlah;
+END //
+DELIMITER ;

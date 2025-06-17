@@ -3,7 +3,7 @@ require("dotenv").config(); // untuk baca .env
 const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME || "train_reservation",
+  process.env.DB_NAME || "tiket_kereta",
   process.env.DB_USER || "root",
   process.env.DB_PASSWORD || "",
   {

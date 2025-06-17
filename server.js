@@ -12,6 +12,7 @@ const bookingRoutes = require("./routes/bookings");
 
 // DB connection (Sequelize)
 const sequelize = require("./config/db");
+require("./models"); // Import semua model agar semua tabel otomatis terdaftar
 
 // Initialize app
 const app = express();
