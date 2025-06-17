@@ -1,4 +1,12 @@
 // models/Petugas.js
+// SQL Equivalent:
+// CREATE TABLE petugas (
+//   id_petugas INT PRIMARY KEY AUTO_INCREMENT,
+//   nama VARCHAR(100) NOT NULL,
+//   email VARCHAR(100) NOT NULL,
+//   no_hp VARCHAR(20) NOT NULL
+// );
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 

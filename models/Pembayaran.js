@@ -1,4 +1,14 @@
 // models/Pembayaran.js
+// SQL Equivalent:
+// CREATE TABLE pembayaran (
+//   id_pembayaran INT PRIMARY KEY AUTO_INCREMENT,
+//   id_pesanan INT NOT NULL,
+//   id_pembelian INT NULL,
+//   metode VARCHAR(50) NOT NULL,
+//   tanggal_pembayaran DATETIME NULL,
+//   status ENUM('pending', 'berhasil', 'gagal') NOT NULL
+// );
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 

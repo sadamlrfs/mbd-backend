@@ -1,4 +1,12 @@
 // models/Pembelian.js
+// SQL Equivalent:
+// CREATE TABLE pembelian (
+//   id_pembelian INT PRIMARY KEY AUTO_INCREMENT,
+//   id_penumpang INT NOT NULL,
+//   id_kereta INT NOT NULL,
+//   tanggal_pembelian DATETIME NOT NULL
+// );
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 

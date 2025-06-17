@@ -1,4 +1,13 @@
 // models/Laporan.js
+// SQL Equivalent:
+// CREATE TABLE laporan (
+//   id_laporan INT PRIMARY KEY AUTO_INCREMENT,
+//   id_pembayaran INT NOT NULL,
+//   id_petugas INT NOT NULL,
+//   isi_laporan TEXT NOT NULL,
+//   tanggal_laporan DATETIME NOT NULL
+// );
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 

@@ -3,6 +3,10 @@ const Kursi = require("../models/Kursi");
 const auth = require("../middleware/auth");
 const router = express.Router();
 
+// SQL Equivalent (Seats):
+// -- Ambil semua kursi: SELECT * FROM kursi;
+// -- Statistik kursi: SELECT * FROM summary_kursi WHERE id=1;
+
 // GET semua kursi
 router.get("/", async (req, res) => {
   try {

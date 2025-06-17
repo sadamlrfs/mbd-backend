@@ -1,4 +1,12 @@
 // models/ETiket.js
+// SQL Equivalent:
+// CREATE TABLE e_tiket (
+//   id_tiket INT PRIMARY KEY AUTO_INCREMENT,
+//   id_pembelian INT NOT NULL,
+//   kode_tiket VARCHAR(100) NOT NULL,
+//   waktu_diterbitkan DATETIME NOT NULL
+// );
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 

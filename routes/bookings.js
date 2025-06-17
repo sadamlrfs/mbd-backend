@@ -1,3 +1,9 @@
+// SQL Equivalent (Booking Kursi):
+// -- Cek kursi: SELECT * FROM kursi WHERE nomor_kursi = ?;
+// -- Jika tersedia, INSERT INTO pesanan (...);
+// -- UPDATE kursi SET dipesan = TRUE WHERE nomor_kursi = ?;
+// -- Jika pembayaran: INSERT INTO pembayaran (...);
+
 const express = require("express");
 const auth = require("../middleware/auth");
 const Pesanan = require("../models/Pesanan");

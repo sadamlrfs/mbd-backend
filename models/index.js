@@ -1,3 +1,13 @@
+// SQL Equivalent (Relasi/Foreign Key):
+// ALTER TABLE pesanan ADD CONSTRAINT fk_pesanan_kursi FOREIGN KEY (id_kursi) REFERENCES kursi(id_kursi);
+// ALTER TABLE pesanan ADD CONSTRAINT fk_pesanan_penumpang FOREIGN KEY (id_penumpang) REFERENCES penumpang(id_penumpang);
+// ALTER TABLE pembelian ADD CONSTRAINT fk_pembelian_penumpang FOREIGN KEY (id_penumpang) REFERENCES penumpang(id_penumpang);
+// ALTER TABLE pembelian ADD CONSTRAINT fk_pembelian_kereta FOREIGN KEY (id_kereta) REFERENCES kereta(id_kereta);
+// ALTER TABLE e_tiket ADD CONSTRAINT fk_etiket_pembelian FOREIGN KEY (id_pembelian) REFERENCES pembelian(id_pembelian);
+// ALTER TABLE pembayaran ADD CONSTRAINT fk_pembayaran_pembelian FOREIGN KEY (id_pembelian) REFERENCES pembelian(id_pembelian);
+// ALTER TABLE laporan ADD CONSTRAINT fk_laporan_pembayaran FOREIGN KEY (id_pembayaran) REFERENCES pembayaran(id_pembayaran);
+// ALTER TABLE laporan ADD CONSTRAINT fk_laporan_petugas FOREIGN KEY (id_petugas) REFERENCES petugas(id_petugas);
+
 const Pesanan = require("./Pesanan");
 const Kursi = require("./Kursi");
 const Penumpang = require("./penumpang");

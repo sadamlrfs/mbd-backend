@@ -1,4 +1,15 @@
 // models/Penumpang.js
+// SQL Equivalent:
+// CREATE TABLE penumpang (
+//   id_penumpang INT PRIMARY KEY AUTO_INCREMENT,
+//   nama VARCHAR(100) NOT NULL,
+//   email VARCHAR(100) NOT NULL UNIQUE,
+//   password VARCHAR(255) NOT NULL,
+//   alamat TEXT NULL,
+//   createdAt DATETIME NOT NULL,
+//   updatedAt DATETIME NOT NULL
+// );
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 

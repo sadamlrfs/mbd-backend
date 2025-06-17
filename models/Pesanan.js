@@ -1,3 +1,11 @@
+// SQL Equivalent:
+// CREATE TABLE pesanan (
+//   id_pesanan INT PRIMARY KEY AUTO_INCREMENT,
+//   id_penumpang INT NOT NULL,
+//   id_kursi INT NOT NULL,
+//   waktu_pesan DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+// );
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 const Penumpang = require("./penumpang");

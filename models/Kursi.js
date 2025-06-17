@@ -1,3 +1,12 @@
+// SQL Equivalent:
+// CREATE TABLE kursi (
+//   id_kursi INT PRIMARY KEY AUTO_INCREMENT,
+//   nomor_kursi VARCHAR(255) NOT NULL UNIQUE,
+//   dipesan BOOLEAN DEFAULT FALSE,
+//   jendela BOOLEAN DEFAULT FALSE,
+//   posisi ENUM('bawah', 'tengah', 'atas') DEFAULT 'bawah'
+// );
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 

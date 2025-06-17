@@ -4,6 +4,11 @@ const jwt = require("jsonwebtoken");
 const Penumpang = require("../models/penumpang"); // model Sequelize
 const router = express.Router();
 
+// SQL Equivalent (Register & Login):
+// -- Register: INSERT INTO penumpang (nama, email, password, alamat, createdAt, updatedAt) VALUES (...);
+// -- Login: SELECT * FROM penumpang WHERE email = ?;
+// -- Password check: (compare hash in aplikasi, bukan SQL)
+
 // REGISTER
 router.post("/register", async (req, res) => {
   const { nama, email, password, alamat } = req.body;

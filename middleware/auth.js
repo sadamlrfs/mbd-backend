@@ -1,3 +1,7 @@
+// SQL Equivalent (Auth Middleware):
+// -- Cek token: (verifikasi JWT di aplikasi, bukan SQL)
+// -- Cek user: SELECT * FROM penumpang WHERE id_penumpang = ?;
+
 const jwt = require("jsonwebtoken");
 const Penumpang = require("../models/penumpang"); // Sesuaikan path-nya
 
